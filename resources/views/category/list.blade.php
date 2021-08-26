@@ -4,7 +4,7 @@
 @section('content')
 <a href="{{route('category.form')}}" class="btn btn-primary" style=float:right;>Nuevo Marca</a>
 @if(Session::has('message'))
-    <p class="text-danger">{{ Session::get('message') }}</p>
+    <p class="text-danger">{{ Session::get('message') }}</p> 
 @endif
 @if(Session::has('successMessage'))
     <p class="text-success">{{ Session::get('successMessage') }}</p>
@@ -34,3 +34,5 @@
 </tbody>
 </table>
 @endsection
+
+
