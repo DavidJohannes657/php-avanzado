@@ -80,6 +80,11 @@ Route::post('category/save',[CategoriesController::class,'save'])->name('categor
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Route::get('/invoice/{id}', function($id){
+   // $invoice = App\Models\Invoice::findOrFail($id);
+   // return dd($invoice->products);
+//});
 
-
-
+use App\Http\Controllers\InvoiceController;
+Route::get('invoices', [InvoiceController::class , 'show']);
+Route::get('invoices/form', [InvoiceController::class , 'form'])->name('invoice.form');
